@@ -1,5 +1,6 @@
 # Deutsch Algorithm implementation using CSV-defined Oracles
 # qiskit version 1.4.5
+import os
 import pandas as pd
 from qiskit import QuantumCircuit
 from qiskit_aer import AerSimulator
@@ -115,10 +116,10 @@ def run_deutsch_experiment(file_path, shots):
 
 
 # --- Execution ---
-import os
 shots = int(input("Enter the number of shots: "))
 try:
-    file_path = os.path.join(os.path.dirname(__file__), "1_function_design.csv")
-    run_deutsch_experiment(file_path, shots)
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    csv_path = os.path.join(script_dir, "1_function_design.csv")
+    run_deutsch_experiment(csv_path, shots)
 except Exception as e:
     print(f"Error: {e}. Ensure '1_function_design.csv' is correct.")

@@ -1,17 +1,17 @@
 # Deutsch Algorithm implementation using CSV-defined Oracles
 # qiskit version 1.4.5 — IBM Quantum Runtime version
+import os
 import pandas as pd
 from qiskit import QuantumCircuit
 from qiskit_ibm_runtime import QiskitRuntimeService, SamplerV2 as Sampler
 from qiskit.transpiler.preset_passmanagers import generate_preset_pass_manager
 
 # ── IBM Credentials ───────────────────────────────────────────────────────────
-IBM_API_TOKEN = "YpyR-n7MdKEGMzp7ILVSbkxqGKzC7xy4JoIIjTeJ5JtU"
+IBM_API_TOKEN = "pCda1D5GSrFDPjdGHBbJey6AmiWxENsAyhTatm0Ey0zG"
 IBM_INSTANCE  = "crn:v1:bluemix:public:quantum-computing:us-east:a/364afecac220402bae02f0d2307ff2f7:3669032e-5210-418c-80a8-7aa43e8180a4::"
 
 service = QiskitRuntimeService(channel="ibm_quantum_platform", token=IBM_API_TOKEN, instance=IBM_INSTANCE)
-backend = service.least_busy()
-
+backend = service.least_busy(operational=True, simulator=False)
 print(f"Running on: {backend.name}")
 # ─────────────────────────────────────────────────────────────────────────────
 
@@ -102,10 +102,10 @@ def run_deutsch_experiment(file_path, shots):
 
 
 # --- Execution ---
-import os
 shots = int(input("Enter the number of shots: "))
 try:
-    file_path = os.path.join(os.path.dirname(__file__), "1_function_design.csv")
-    run_deutsch_experiment(file_path, shots)
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    csv_path = os.path.join(script_dir, "Deutsch_1_function_design.csv")
+    run_deutsch_experiment(csv_path, shots)
 except Exception as e:
-    print(f"Error: {e}. Ensure '1_function_design.csv' is correct.")
+    print(f"Error: {e}. Ensure 'Deutsch_1_function_design.csv' is correct.")
