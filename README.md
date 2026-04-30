@@ -10,6 +10,7 @@ This repository contains implementations of fundamental quantum algorithms:
 ## Tools Used
 - Qiskit
 - Python
+- Jupyter Notebook
 
 ## Goal
 To understand quantum algorithms through implementation.
