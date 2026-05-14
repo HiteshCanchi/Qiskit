@@ -4,10 +4,10 @@
 The Deutsch-Jozsa algorithm is one of the first examples of a quantum algorithm that is exponentially faster than any possible deterministic classical algorithm. It generalizes the Deutsch algorithm to functions $f: \{0,1\}^n \rightarrow \{0,1\}$ to determine if a black-box function is **constant** or **balanced**.
 
 ## Files
-- [cite_start]**DJ_Algorithm.py** - Core implementation of the N-qubit Deutsch-Jozsa algorithm. [cite: 242]
-- [cite_start]**DJ_Algorithm_IBM.py** - Optimized script for execution on real IBM Quantum processors. [cite: 242]
-- [cite_start]**DJ_truth_table.csv** - CSV specification of the oracle function design. [cite: 242]
-- [cite_start]**2_function_design.csv** - Alternative oracle configuration for testing. [cite: 242]
+- **DJ_Algorithm.py** - Core implementation of the N-qubit Deutsch-Jozsa algorithm.
+- **DJ_Algorithm_IBM.py** - Optimized script for execution on real IBM Quantum processors.
+- **DJ_truth_table.csv** - CSV specification of the oracle function design.
+- **2_function_design.csv** - Alternative oracle configuration for testing.
 
 ## Requirements
 ```bash
