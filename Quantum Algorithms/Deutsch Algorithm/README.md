@@ -4,11 +4,11 @@
 The Deutsch Algorithm is a fundamental quantum algorithm that demonstrates quantum speedup. It determines whether a black-box function (oracle) $f: \{0,1\} \rightarrow \{0,1\}$ is **constant** or **balanced** using only a single query, whereas a classical approach would require two.
 
 ## Files
-- [cite_start]**DeutschAlgorithm.py** - Core implementation using local simulators[cite: 242].
-- [cite_start]**DeutschAlgorithm2.py** - Alternative or optimized version[cite: 242].
-- [cite_start]**Deutsch_Algorithm_IBM.py** - Script for execution on real IBM Quantum hardware[cite: 242].
-- [cite_start]**Deutsch_1_function_design.csv** - Oracle specification for test case 1[cite: 242].
-- [cite_start]**Deutsch_3_function_design.csv** - Oracle specification for test case 3[cite: 242].
+- **DeutschAlgorithm.py** - Core implementation using local simulators
+- **DeutschAlgorithm2.py** - Alternative or optimized version
+- **Deutsch_Algorithm_IBM.py** - Script for execution on real IBM Quantum hardware
+- **Deutsch_1_function_design.csv** - Oracle specification for test case 1
+- **Deutsch_3_function_design.csv** - Oracle specification for test case 3
 
 ## Requirements
 ```bash
