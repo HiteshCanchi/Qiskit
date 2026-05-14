@@ -3,6 +3,8 @@
 This repository contains implementations of fundamental quantum algorithms:
 
 - Deutsch Algorithm
+- Deutsch Jozsa Algorithm
+- Bernstein Vazirani Algorithm
 - Grover's Algorithm
 - Shor's Algorithm
 - Simon's Algorithm
@@ -13,4 +15,4 @@ This repository contains implementations of fundamental quantum algorithms:
 - Jupyter Notebook
 
 ## Goal
-To understand quantum algorithms through implementation.
+To understand quantum algorithms through implementation using AER simulator and real processors by IBM.
